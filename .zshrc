@@ -12,6 +12,7 @@ fi
 # Pure
 # ==========================================
 
+FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
 autoload -U promptinit; promptinit
 prompt pure
 
@@ -20,7 +21,7 @@ prompt pure
 # ==========================================
 
 # brew install zsh-syntax-highlighting
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 
 # ==========================================
@@ -28,7 +29,7 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 # ==========================================
 
 # brew install zsh-completions
-FPATH=/usr/local/share/zsh-completions:$FPATH
+FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
 autoload -Uz compinit; compinit
 
 zstyle ':completion:*:default' menu select=2
