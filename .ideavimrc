@@ -10,3 +10,4 @@ vnoremap <Tab> >gv
 vnoremap <S-Tab> <gv
 
 set surround
+set iskeyword=@,48-57,_,192-255,?,-,*,!,+,/,=,<,>,.,:,$
